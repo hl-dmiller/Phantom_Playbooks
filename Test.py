@@ -16,6 +16,12 @@ def set_label_1(action=None, success=None, container=None, results=None, handle=
     phantom.debug('set_label_1() called')
 
     phantom.set_label(container=container, label="events")
+    call_api_2(container=container)
+
+    return
+
+def call_api_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('call_api_2() called')
 
     return
 
