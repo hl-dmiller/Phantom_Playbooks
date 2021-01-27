@@ -7,7 +7,7 @@
             "clean": false,
             "code_block": "",
             "description": "",
-            "hash": "5e0f16b2a44afcae104213f21e7bc812e779b03d",
+            "hash": "3ece960e422cf589e812f20c1ccb192bdddadb60",
             "joint": {
                 "cells": [
                     {
@@ -200,8 +200,8 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
+                        "connection_name": "geolocate ip",
+                        "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -706,6 +706,45 @@
                         "type": "coa.Action",
                         "warn": "",
                         "z": 5
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "4ed6390d-aaf5-4307-9092-78f8284ebe53",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8b290dbf-6db2-4abc-a21e-65be4e399b02",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "71f7dc3c-6377-4b40-bdf3-756e37cce8cd",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 6
                     }
                 ]
             },
@@ -715,7 +754,7 @@
         "schema": 4,
         "version": "4.9.34514"
     },
-    "create_time": "2021-01-27T20:23:46.335781+00:00",
+    "create_time": "2021-01-27T20:26:59.654701+00:00",
     "draft_mode": false,
     "labels": [
         "*"
