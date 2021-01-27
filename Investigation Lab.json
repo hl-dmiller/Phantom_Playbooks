@@ -4,10 +4,10 @@
     "category": "Lab",
     "coa": {
         "data": {
-            "clean": true,
+            "clean": false,
             "code_block": "",
             "description": "",
-            "hash": "81749ca24c0ae8cf874405d711a21bb6f6291436",
+            "hash": "5e0f16b2a44afcae104213f21e7bc812e779b03d",
             "joint": {
                 "cells": [
                     {
@@ -715,7 +715,7 @@
         "schema": 4,
         "version": "4.9.34514"
     },
-    "create_time": "2021-01-27T20:19:16.407828+00:00",
+    "create_time": "2021-01-27T20:23:46.335781+00:00",
     "draft_mode": false,
     "labels": [
         "*"
