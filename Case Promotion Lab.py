@@ -67,7 +67,7 @@ def Fixed_Address(action=None, success=None, container=None, results=None, handl
 
     # call connected blocks if filtered artifacts or results
     if matched_artifacts_1 or matched_results_1:
-        format_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_1, filtered_results=matched_results_1)
+        Fixed_Reason(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_1, filtered_results=matched_results_1)
 
     return
 
@@ -86,7 +86,9 @@ Source URL: {3}
 
 Target Server IP: {4}
 
-Suspicious File Path: {5}"""
+Suspicious File Path: {5}
+
+Escalation Reason: {6}"""
 
     # parameter list for template variable replacement
     parameters = [
@@ -96,6 +98,7 @@ Suspicious File Path: {5}"""
         "filtered-data:Fixed_sourceDNS:condition_1:artifact:*.cef.sourceDnsDomain",
         "filtered-data:Fixed_Address:condition_1:artifact:*.cef.destinationAddress",
         "filtered-data:Fixed_File_Path:condition_1:artifact:*.cef.filePath",
+        "filtered-data:Fixed_Reason:condition_1:artifact:*.cef.reason",
     ]
 
     phantom.format(container=container, template=template, parameters=parameters, name="format_1")
@@ -114,17 +117,34 @@ def send_email_1(action=None, success=None, container=None, results=None, handle
     
     # build parameters list for 'send_email_1' call
     parameters.append({
-        'from': "edu-labserver@splunk.com",
-        'to': "dmiller@hurricanelabs.com",
         'cc': "",
+        'to': "dmiller@hurricanelabs.com",
         'bcc': "",
-        'subject': "New Case Created",
         'body': formatted_data_1,
-        'attachments': "",
+        'from': "edu-labserver@splunk.com",
         'headers': "",
+        'subject': "New Case Created",
+        'attachments': "",
     })
 
     phantom.act(action="send email", parameters=parameters, assets=['smtp'], name="send_email_1")
+
+    return
+
+def Fixed_Reason(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Fixed_Reason() called')
+
+    # collect filtered artifact ids for 'if' condition 1
+    matched_artifacts_1, matched_results_1 = phantom.condition(
+        container=container,
+        conditions=[
+            ["artifact:*.cef.reason", "!=", ""],
+        ],
+        name="Fixed_Reason:condition_1")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_1 or matched_results_1:
+        format_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_1, filtered_results=matched_results_1)
 
     return
 
