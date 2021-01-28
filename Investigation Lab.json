@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "04bf45d938276d50b2dc6c6c06b83b6bb532b5a9",
+            "hash": "f24ab0798088bbed15c58e5bd494ca9fda066032",
             "joint": {
                 "cells": [
                     {
@@ -4558,7 +4558,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def decision_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_1() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"file_reputation_1:action_result.data.*.positives\", \">\", 45],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        Notify_IT(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n\n    return",
+                        "block_code": "def decision_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_1() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"file_reputation_1:action_result.data.*.positives\", \">\", 10],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        Notify_IT(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -4599,7 +4599,7 @@
                                         "comparison": ">",
                                         "data_type": "",
                                         "param": "file_reputation_1:action_result.data.*.positives",
-                                        "value": "45"
+                                        "value": "10"
                                     }
                                 ],
                                 "display": "If",
@@ -4697,7 +4697,7 @@
         "schema": 4,
         "version": "4.9.34514"
     },
-    "create_time": "2021-01-28T13:05:00.393473+00:00",
+    "create_time": "2021-01-28T13:05:37.368752+00:00",
     "draft_mode": false,
     "labels": [
         "*"

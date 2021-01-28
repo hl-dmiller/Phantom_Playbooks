@@ -89,7 +89,7 @@ def decision_1(action=None, success=None, container=None, results=None, handle=N
         container=container,
         action_results=results,
         conditions=[
-            ["file_reputation_1:action_result.data.*.positives", ">", 45],
+            ["file_reputation_1:action_result.data.*.positives", ">", 10],
         ])
 
     # call connected blocks if condition 1 matched
