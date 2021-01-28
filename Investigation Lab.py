@@ -7,17 +7,8 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
     
-    # call 'geolocate_ip_1' block
-    geolocate_ip_1(container=container)
-
-    # call 'domain_reputation_1' block
-    domain_reputation_1(container=container)
-
-    # call 'file_reputation_1' block
-    file_reputation_1(container=container)
-
-    # call 'playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1' block
-    playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1(container=container)
+    # call 'decision_4' block
+    decision_4(container=container)
 
     return
 
@@ -393,6 +384,26 @@ def playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1(action=None, 
     
     # call playbook "Phantom_Playbooks/Log File Hashes", returns the playbook_run_id
     playbook_run_id = phantom.playbook(playbook="Phantom_Playbooks/Log File Hashes", container=container)
+
+    return
+
+def decision_4(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('decision_4() called')
+
+    # check for 'if' condition 1
+    matched = phantom.decision(
+        container=container,
+        conditions=[
+            ["artifact:*.source_data_identifier", "!=", "Investigation Lab"],
+        ])
+
+    # call connected blocks if condition 1 matched
+    if matched:
+        geolocate_ip_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        domain_reputation_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        file_reputation_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        return
 
     return
 

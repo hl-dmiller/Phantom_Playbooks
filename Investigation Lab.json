@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "00cf6f17f052b92f8ecc24f8cb9efbcb8d739bde",
+            "hash": "d58d072367ab99c62fa8b28d7c26da0c1977604d",
             "joint": {
                 "cells": [
                     {
@@ -55,7 +55,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'geolocate_ip_1' block\n    geolocate_ip_1(container=container)\n\n    # call 'domain_reputation_1' block\n    domain_reputation_1(container=container)\n\n    # call 'file_reputation_1' block\n    file_reputation_1(container=container)\n\n    # call 'playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1' block\n    playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1(container=container)\n\n    return",
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'decision_4' block\n    decision_4(container=container)\n\n    return",
                         "callback_code": "# read-only block view not available",
                         "callback_start": 1,
                         "callsback": false,
@@ -76,7 +76,7 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 24,
+                        "line_end": 15,
                         "line_start": 7,
                         "name": "",
                         "notes": "",
@@ -138,7 +138,7 @@
                             }
                         },
                         "position": {
-                            "x": 240,
+                            "x": 0,
                             "y": 240
                         },
                         "previous_function": "",
@@ -153,45 +153,6 @@
                         "type": "coa.StartEnd",
                         "warn": false,
                         "z": 1
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "d25698b1-8a25-4fa8-b734-b0053da5b7be",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "5a2381d4-9ef7-4ec8-952d-ea2f82c462de",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "8b290dbf-6db2-4abc-a21e-65be4e399b02",
-                            "selector": ".port-body[type=\"input\"]"
-                        },
-                        "type": "link",
-                        "z": 3
                     },
                     {
                         "action": "geolocate ip",
@@ -456,6 +417,9 @@
                             "g.error": {
                                 "opacity": 0
                             },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
                             "g.icon image": {
                                 "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
                             },
@@ -494,8 +458,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 45,
-                        "line_start": 24,
+                        "line_end": 36,
+                        "line_start": 15,
                         "message": "Configuring now",
                         "name": "geolocate ip",
                         "notes": "",
@@ -641,12 +605,12 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 412,
-                        "line_start": 399,
+                        "line_end": 423,
+                        "line_start": 410,
                         "name": "",
                         "notes": "",
                         "number": 0,
-                        "order": 22,
+                        "order": 23,
                         "outPorts": [],
                         "ports": {
                             "groups": {
@@ -716,84 +680,6 @@
                         "type": "coa.StartEnd",
                         "warn": false,
                         "z": 7
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "e18a5d20-eb8b-4f2e-8201-8f2aa0f1fe5b",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "5a2381d4-9ef7-4ec8-952d-ea2f82c462de",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "f7abfed5-c125-42df-a2c2-56cd85564174",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 23
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "1c9278bc-746d-4617-af5b-f834f8530d3a",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "5a2381d4-9ef7-4ec8-952d-ea2f82c462de",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "91262b71-c552-45c5-a857-34df06bcfe44",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 24
                     },
                     {
                         "action": "file reputation",
@@ -3251,8 +3137,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 87,
-                        "line_start": 66,
+                        "line_end": 78,
+                        "line_start": 57,
                         "message": "Configuring now",
                         "name": "file reputation",
                         "notes": "",
@@ -3565,8 +3451,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 163,
-                        "line_start": 145,
+                        "line_end": 154,
+                        "line_start": 136,
                         "name": "filter",
                         "notes": "",
                         "number": 1,
@@ -4473,8 +4359,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 66,
-                        "line_start": 45,
+                        "line_end": 57,
+                        "line_start": 36,
                         "message": "Configuring now",
                         "name": "domain reputation",
                         "notes": "",
@@ -4747,8 +4633,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 223,
-                        "line_start": 205,
+                        "line_end": 214,
+                        "line_start": 196,
                         "name": "filter",
                         "notes": "",
                         "number": 2,
@@ -5016,8 +4902,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 272,
-                        "line_start": 259,
+                        "line_end": 263,
+                        "line_start": 250,
                         "message": "Configuring now",
                         "name": "set status, add comment",
                         "notes": "",
@@ -5226,8 +5112,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 280,
-                        "line_start": 272,
+                        "line_end": 271,
+                        "line_start": 263,
                         "message": "Configuring now",
                         "name": "Phantom_Playbooks/Case Promotion Lab",
                         "notes": "",
@@ -5380,8 +5266,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 145,
-                        "line_start": 108,
+                        "line_end": 136,
+                        "line_start": 99,
                         "message": "A potentially malicious file download has been detected on a local server with IP\naddress {0}. Notify IT team?",
                         "name": "prompt",
                         "notes": "",
@@ -5573,8 +5459,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 205,
-                        "line_start": 184,
+                        "line_end": 196,
+                        "line_start": 175,
                         "name": "decision",
                         "notes": "",
                         "number": 3,
@@ -6254,8 +6140,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 310,
-                        "line_start": 280,
+                        "line_end": 301,
+                        "line_start": 271,
                         "message": "Configuring now",
                         "name": "add artifact",
                         "notes": "",
@@ -6463,8 +6349,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 121,
-                        "line_end": 108,
-                        "line_start": 87,
+                        "line_end": 99,
+                        "line_start": 78,
                         "name": "decision",
                         "notes": "",
                         "number": 1,
@@ -6815,8 +6701,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 184,
-                        "line_start": 163,
+                        "line_end": 175,
+                        "line_start": 154,
                         "name": "decision",
                         "notes": "",
                         "number": 2,
@@ -7025,8 +6911,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 259,
-                        "line_start": 250,
+                        "line_end": 250,
+                        "line_start": 241,
                         "message": "Configuring now",
                         "name": "pin, add comment",
                         "notes": "",
@@ -7158,6 +7044,9 @@
                             "g.error": {
                                 "opacity": 0
                             },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
                             "g.notes": {
                                 "display": "block"
                             },
@@ -7201,8 +7090,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 364,
-                        "line_start": 352,
+                        "line_end": 355,
+                        "line_start": 343,
                         "message": "Configuring now",
                         "name": "pin",
                         "notes": "",
@@ -7373,6 +7262,9 @@
                             "g.error": {
                                 "opacity": 0
                             },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
                             "g.notes": {
                                 "display": "block"
                             },
@@ -7402,9 +7294,9 @@
                         ],
                         "join_code": "def join_Filter_Banned_Countries(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('join_Filter_Banned_Countries() called')\n\n    # check if all connected incoming playbooks, actions, or custom functions are done i.e. have succeeded or failed\n    if phantom.completed(action_names=['geolocate_ip_1', 'domain_reputation_1', 'file_reputation_1']):\n        \n        # call connected block \"Filter_Banned_Countries\"\n        Filter_Banned_Countries(container=container, handle=handle)\n    \n    return",
                         "join_optional": [],
-                        "join_start": 341,
-                        "line_end": 352,
-                        "line_start": 310,
+                        "join_start": 332,
+                        "line_end": 343,
+                        "line_start": 301,
                         "name": "filter",
                         "notes": "",
                         "number": 3,
@@ -7639,6 +7531,9 @@
                             "g.error": {
                                 "opacity": 0
                             },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
                             "g.notes": {
                                 "display": "block"
                             },
@@ -7670,8 +7565,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 380,
-                        "line_start": 364,
+                        "line_end": 371,
+                        "line_start": 355,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -7856,8 +7751,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 250,
-                        "line_start": 239,
+                        "line_end": 241,
+                        "line_start": 230,
                         "message": "Configuring now",
                         "name": "set status, add comment",
                         "notes": "",
@@ -8034,8 +7929,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 391,
-                        "line_start": 380,
+                        "line_end": 382,
+                        "line_start": 371,
                         "message": "Configuring now",
                         "name": "set status, add comment",
                         "notes": "",
@@ -8198,8 +8093,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 239,
-                        "line_start": 223,
+                        "line_end": 230,
+                        "line_start": 214,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -8326,45 +8221,6 @@
                         "z": 126
                     },
                     {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "3fa565cd-e23a-4306-a9f7-438d861f0db8",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "5a2381d4-9ef7-4ec8-952d-ea2f82c462de",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "e8d2c898-9490-42e6-a18c-441ef308b552",
-                            "selector": ".port-body[type=\"input\"]"
-                        },
-                        "type": "link",
-                        "z": 127
-                    },
-                    {
                         "active": false,
                         "angle": 0,
                         "attrs": {
@@ -8422,6 +8278,9 @@
                             "g.error": {
                                 "opacity": 0
                             },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
                             "g.notes": {
                                 "display": "block"
                             },
@@ -8452,8 +8311,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 399,
-                        "line_start": 391,
+                        "line_end": 390,
+                        "line_start": 382,
                         "message": "Configuring now",
                         "name": "Phantom_Playbooks/Log File Hashes",
                         "notes": "",
@@ -8533,6 +8392,367 @@
                         "type": "coa.CallPlaybook",
                         "warn": false,
                         "z": 128
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "7ec70a8f-21fa-4a77-ac1d-5f00e0500e05",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "5a2381d4-9ef7-4ec8-952d-ea2f82c462de",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "8ce520ad-313d-4004-95cd-1a1b3e485a25",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 129
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#FFFFFF",
+                                "stroke": "#637282",
+                                "transform": "rotate(45 30 70)"
+                            },
+                            ".inPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".number": {
+                                "text": 4
+                            },
+                            ".outPorts>.port-0": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                },
+                                "ref-x": 83,
+                                "ref-y": 40
+                            },
+                            ".outPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def decision_4(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_4() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        conditions=[\n            [\"artifact:*.source_data_identifier\", \"!=\", \"Investigation Lab\"],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        geolocate_ip_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        domain_reputation_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        file_reputation_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "hasElse": false,
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "8ce520ad-313d-4004-95cd-1a1b3e485a25",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 410,
+                        "line_start": 390,
+                        "name": "decision",
+                        "notes": "",
+                        "number": 4,
+                        "order": 22,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "outputs": [
+                            {
+                                "conditions": [
+                                    {
+                                        "comparison": "!=",
+                                        "data_type": "",
+                                        "param": "artifact:*.source_data_identifier",
+                                        "value": "Investigation Lab"
+                                    }
+                                ],
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 160,
+                            "y": 220
+                        },
+                        "previous_function": "",
+                        "previous_name": "decision_4",
+                        "show_number": true,
+                        "size": {
+                            "height": 82,
+                            "width": 82
+                        },
+                        "state": "decision",
+                        "status": "",
+                        "type": "coa.Decision",
+                        "warn": "",
+                        "z": 131
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "a2cb46af-444c-4903-ba84-65ad04e4646f",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8ce520ad-313d-4004-95cd-1a1b3e485a25",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "8b290dbf-6db2-4abc-a21e-65be4e399b02",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 132
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "eba62942-f627-443a-bde9-426432dcac68",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8ce520ad-313d-4004-95cd-1a1b3e485a25",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "f7abfed5-c125-42df-a2c2-56cd85564174",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 133
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "dbfd013b-8249-4097-8637-f01687fa0918",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8ce520ad-313d-4004-95cd-1a1b3e485a25",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "91262b71-c552-45c5-a857-34df06bcfe44",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 134
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "42ba9e0c-b3ab-4665-b118-a34916254751",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8ce520ad-313d-4004-95cd-1a1b3e485a25",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "e8d2c898-9490-42e6-a18c-441ef308b552",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 135
                     }
                 ]
             },
@@ -8542,7 +8762,7 @@
         "schema": 4,
         "version": "4.9.34514"
     },
-    "create_time": "2021-01-28T21:21:19.379111+00:00",
+    "create_time": "2021-01-28T21:27:42.948121+00:00",
     "draft_mode": false,
     "labels": [
         "file download"
