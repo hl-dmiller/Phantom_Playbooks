@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "71910fade4aedd9998d0315cede99b8efe722820",
+            "hash": "c0241ea11d245325b91961ae81f86086d302dcbb",
             "joint": {
                 "cells": [
                     {
@@ -55,7 +55,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'geolocate_ip_1' block\n    geolocate_ip_1(container=container)\n\n    # call 'domain_reputation_1' block\n    domain_reputation_1(container=container)\n\n    # call 'file_reputation_1' block\n    file_reputation_1(container=container)\n\n    return",
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'geolocate_ip_1' block\n    geolocate_ip_1(container=container)\n\n    # call 'domain_reputation_1' block\n    domain_reputation_1(container=container)\n\n    # call 'file_reputation_1' block\n    file_reputation_1(container=container)\n\n    # call 'playbook_Phantom_Playbooks_Log_File_Hashes_1' block\n    playbook_Phantom_Playbooks_Log_File_Hashes_1(container=container)\n\n    return",
                         "callback_code": "# read-only block view not available",
                         "callback_start": 1,
                         "callsback": false,
@@ -76,7 +76,7 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 21,
+                        "line_end": 24,
                         "line_start": 7,
                         "name": "",
                         "notes": "",
@@ -494,8 +494,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 42,
-                        "line_start": 21,
+                        "line_end": 45,
+                        "line_start": 24,
                         "message": "Configuring now",
                         "name": "geolocate ip",
                         "notes": "",
@@ -641,12 +641,12 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 401,
-                        "line_start": 388,
+                        "line_end": 412,
+                        "line_start": 399,
                         "name": "",
                         "notes": "",
                         "number": 0,
-                        "order": 21,
+                        "order": 22,
                         "outPorts": [],
                         "ports": {
                             "groups": {
@@ -3251,8 +3251,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 84,
-                        "line_start": 63,
+                        "line_end": 87,
+                        "line_start": 66,
                         "message": "Configuring now",
                         "name": "file reputation",
                         "notes": "",
@@ -3565,8 +3565,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 160,
-                        "line_start": 142,
+                        "line_end": 163,
+                        "line_start": 145,
                         "name": "filter",
                         "notes": "",
                         "number": 1,
@@ -4473,8 +4473,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 63,
-                        "line_start": 42,
+                        "line_end": 66,
+                        "line_start": 45,
                         "message": "Configuring now",
                         "name": "domain reputation",
                         "notes": "",
@@ -4747,8 +4747,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 220,
-                        "line_start": 202,
+                        "line_end": 223,
+                        "line_start": 205,
                         "name": "filter",
                         "notes": "",
                         "number": 2,
@@ -5016,8 +5016,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 269,
-                        "line_start": 256,
+                        "line_end": 272,
+                        "line_start": 259,
                         "message": "Configuring now",
                         "name": "set status, add comment",
                         "notes": "",
@@ -5226,8 +5226,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 277,
-                        "line_start": 269,
+                        "line_end": 280,
+                        "line_start": 272,
                         "message": "Configuring now",
                         "name": "Phantom_Playbooks/Case Promotion Lab",
                         "notes": "",
@@ -5380,8 +5380,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 142,
-                        "line_start": 105,
+                        "line_end": 145,
+                        "line_start": 108,
                         "message": "A potentially malicious file download has been detected on a local server with IP\naddress {0}. Notify IT team?",
                         "name": "prompt",
                         "notes": "",
@@ -5573,8 +5573,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 202,
-                        "line_start": 181,
+                        "line_end": 205,
+                        "line_start": 184,
                         "name": "decision",
                         "notes": "",
                         "number": 3,
@@ -6254,8 +6254,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 307,
-                        "line_start": 277,
+                        "line_end": 310,
+                        "line_start": 280,
                         "message": "Configuring now",
                         "name": "add artifact",
                         "notes": "",
@@ -6463,8 +6463,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 121,
-                        "line_end": 105,
-                        "line_start": 84,
+                        "line_end": 108,
+                        "line_start": 87,
                         "name": "decision",
                         "notes": "",
                         "number": 1,
@@ -6815,8 +6815,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 181,
-                        "line_start": 160,
+                        "line_end": 184,
+                        "line_start": 163,
                         "name": "decision",
                         "notes": "",
                         "number": 2,
@@ -7025,8 +7025,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 256,
-                        "line_start": 247,
+                        "line_end": 259,
+                        "line_start": 250,
                         "message": "Configuring now",
                         "name": "pin, add comment",
                         "notes": "",
@@ -7195,8 +7195,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 361,
-                        "line_start": 349,
+                        "line_end": 364,
+                        "line_start": 352,
                         "message": "Configuring now",
                         "name": "pin",
                         "notes": "",
@@ -7393,9 +7393,9 @@
                         ],
                         "join_code": "def join_Filter_Banned_Countries(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('join_Filter_Banned_Countries() called')\n\n    # check if all connected incoming playbooks, actions, or custom functions are done i.e. have succeeded or failed\n    if phantom.completed(action_names=['geolocate_ip_1', 'domain_reputation_1', 'file_reputation_1']):\n        \n        # call connected block \"Filter_Banned_Countries\"\n        Filter_Banned_Countries(container=container, handle=handle)\n    \n    return",
                         "join_optional": [],
-                        "join_start": 338,
-                        "line_end": 349,
-                        "line_start": 307,
+                        "join_start": 341,
+                        "line_end": 352,
+                        "line_start": 310,
                         "name": "filter",
                         "notes": "",
                         "number": 3,
@@ -7655,8 +7655,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 377,
-                        "line_start": 361,
+                        "line_end": 380,
+                        "line_start": 364,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -7841,8 +7841,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 247,
-                        "line_start": 236,
+                        "line_end": 250,
+                        "line_start": 239,
                         "message": "Configuring now",
                         "name": "set status, add comment",
                         "notes": "",
@@ -8013,8 +8013,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 388,
-                        "line_start": 377,
+                        "line_end": 391,
+                        "line_start": 380,
                         "message": "Configuring now",
                         "name": "set status, add comment",
                         "notes": "",
@@ -8177,8 +8177,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 236,
-                        "line_start": 220,
+                        "line_end": 239,
+                        "line_start": 223,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -8303,6 +8303,209 @@
                         },
                         "type": "link",
                         "z": 126
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "3fa565cd-e23a-4306-a9f7-438d861f0db8",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "5a2381d4-9ef7-4ec8-952d-ea2f82c462de",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "e8d2c898-9490-42e6-a18c-441ef308b552",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 127
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#FFFFFF",
+                                "stroke": "#818D99"
+                            },
+                            ".color-band": {
+                                "fill": "#171D21"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".playbook": {
+                                "text": "Log File Hashes"
+                            },
+                            ".scmName": {
+                                "text": "Phantom_Playbook...."
+                            },
+                            ".title": {
+                                "text": "Playbook"
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def playbook_Phantom_Playbooks_Log_File_Hashes_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('playbook_Phantom_Playbooks_Log_File_Hashes_1() called')\n    \n    # call playbook \"Phantom_Playbooks/Log File Hashes\", returns the playbook_run_id\n    playbook_run_id = phantom.playbook(playbook=\"Phantom_Playbooks/Log File Hashes\", container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "e8d2c898-9490-42e6-a18c-441ef308b552",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 399,
+                        "line_start": 391,
+                        "message": "Configuring now",
+                        "name": "Log File Hashes",
+                        "notes": "",
+                        "number": 1,
+                        "order": 21,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "playbook": "Phantom_Playbooks/Log File Hashes",
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 440,
+                            "y": 560
+                        },
+                        "previous_function": "",
+                        "previous_name": "playbook_Phantom_Playbooks_Log_File_Hashes_1",
+                        "scmName": "Phantom_Playbooks",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "callplaybook",
+                        "status": "",
+                        "title": "Playbook",
+                        "type": "coa.CallPlaybook",
+                        "warn": false,
+                        "z": 128
                     }
                 ]
             },
@@ -8312,7 +8515,7 @@
         "schema": 4,
         "version": "4.9.34514"
     },
-    "create_time": "2021-01-28T21:03:19.303747+00:00",
+    "create_time": "2021-01-28T21:19:16.905604+00:00",
     "draft_mode": false,
     "labels": [
         "*"
