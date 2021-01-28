@@ -16,8 +16,8 @@ def on_start(container):
     # call 'file_reputation_1' block
     file_reputation_1(container=container)
 
-    # call 'playbook_Phantom_Playbooks_Log_File_Hashes_1' block
-    playbook_Phantom_Playbooks_Log_File_Hashes_1(container=container)
+    # call 'playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1' block
+    playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1(container=container)
 
     return
 
@@ -388,8 +388,8 @@ def Low_Risk_Country(action=None, success=None, container=None, results=None, ha
 
     return
 
-def playbook_Phantom_Playbooks_Log_File_Hashes_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('playbook_Phantom_Playbooks_Log_File_Hashes_1() called')
+def playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_Phantom_Playbooks_Phantom_Playbooks_Log_File_Hashes_1() called')
     
     # call playbook "Phantom_Playbooks/Log File Hashes", returns the playbook_run_id
     playbook_run_id = phantom.playbook(playbook="Phantom_Playbooks/Log File Hashes", container=container)
