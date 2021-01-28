@@ -202,6 +202,7 @@ def event_promote(action=None, success=None, container=None, results=None, handl
 
     # call connected blocks if condition 1 matched
     if matched:
+        Promote_to_Case(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
         return
 
     # call connected blocks for 'else' condition 2
@@ -273,6 +274,14 @@ def set_status_add_comment_4(action=None, success=None, container=None, results=
     phantom.set_status(container=container, status="Closed")
 
     phantom.comment(container=container, comment=results_item_1_0)
+
+    return
+
+def Promote_to_Case(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Promote_to_Case() called')
+    
+    # call playbook "Phantom_Playbooks/Case Promotion Lab", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="Phantom_Playbooks/Case Promotion Lab", container=container, name="Promote_to_Case")
 
     return
 
