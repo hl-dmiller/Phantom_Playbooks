@@ -176,7 +176,7 @@ def prompt_timeout(action=None, success=None, container=None, results=None, hand
         container=container,
         action_results=results,
         conditions=[
-            ["Notify_IT:action_result.status", "==", "\"success\""],
+            ["Notify_IT:action_result.status", "==", "success"],
         ])
 
     # call connected blocks if condition 1 matched
@@ -197,7 +197,7 @@ def event_promote(action=None, success=None, container=None, results=None, handl
         container=container,
         action_results=results,
         conditions=[
-            ["Notify_IT:action_result.summary.responses.0", "==", "\"Yes\""],
+            ["Notify_IT:action_result.summary.responses.0", "==", "Yes"],
         ])
 
     # call connected blocks if condition 1 matched
