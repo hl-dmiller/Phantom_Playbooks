@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "c487599b7e8617557ab3a12846578d495645a888",
+            "hash": "b50be1419df6edc8f40416945cd9736d05b90320",
             "joint": {
                 "cells": [
                     {
@@ -6358,7 +6358,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def high_positives(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('high_positives() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"file_reputation_1:action_result.data.*.positives\", \">\", 100],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        filter_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n    filter_2(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n\n    return",
+                        "block_code": "def high_positives(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('high_positives() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"file_reputation_1:action_result.data.*.positives\", \">\", 10],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        filter_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n    filter_2(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -6399,7 +6399,7 @@
                                         "comparison": ">",
                                         "data_type": "",
                                         "param": "file_reputation_1:action_result.data.*.positives",
-                                        "value": "100"
+                                        "value": "10"
                                     }
                                 ],
                                 "display": "If",
@@ -6497,7 +6497,7 @@
         "schema": 4,
         "version": "4.9.34514"
     },
-    "create_time": "2021-01-28T14:08:12.777788+00:00",
+    "create_time": "2021-01-28T14:08:33.531733+00:00",
     "draft_mode": false,
     "labels": [
         "*"
