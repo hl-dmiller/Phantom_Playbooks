@@ -202,7 +202,7 @@ def event_promote(action=None, success=None, container=None, results=None, handl
 
     # call connected blocks if condition 1 matched
     if matched:
-        Promote_to_Case(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        add_artifact_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
         return
 
     # call connected blocks for 'else' condition 2
@@ -282,6 +282,36 @@ def Promote_to_Case(action=None, success=None, container=None, results=None, han
     
     # call playbook "Phantom_Playbooks/Case Promotion Lab", returns the playbook_run_id
     playbook_run_id = phantom.playbook(playbook="Phantom_Playbooks/Case Promotion Lab", container=container, name="Promote_to_Case")
+
+    return
+
+def add_artifact_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('add_artifact_1() called')
+        
+    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
+    
+    # collect data for 'add_artifact_1' call
+    results_data_1 = phantom.collect2(container=container, datapath=['Notify_IT:action_result.summary.responses.1', 'Notify_IT:action_result.parameter.context.artifact_id'], action_results=results)
+
+    parameters = []
+    
+    # build parameters list for 'add_artifact_1' call
+    for results_item_1 in results_data_1:
+        parameters.append({
+            'name': "Promote Reason",
+            'container_id': "",
+            'label': "event",
+            'source_data_identifier': "Investigation lab",
+            'cef_name': "reason",
+            'cef_value': results_item_1[0],
+            'cef_dictionary': "",
+            'contains': "",
+            'run_automation': "true",
+            # context (artifact id) is added to associate results with the artifact
+            'context': {'artifact_id': results_item_1[1]},
+        })
+
+    phantom.act(action="add artifact", parameters=parameters, assets=['phantom'], callback=Promote_to_Case, name="add_artifact_1")
 
     return
 
